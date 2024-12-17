@@ -1,0 +1,11 @@
+{
+  "name": "monster",
+  "version": "1.0.0",
+  "data": [
+    { "Spead": 2 },
+    { "type": [0, 1] },
+    { "spawnPositon": 11 },
+    { "spawnCooltimeMin": 1 },
+    { "spawnCooltimeMax": 3 }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "combo",
+  "version": "1.0.0",
+  "data": [
+    { "score": "0", "text": "NO" },
+    { "score": "100", "text": "GOOD" },
+    { "score": "400", "text": "GREAT" },
+    { "score": "1000", "text": "Excellent" }
+  ]
+}
