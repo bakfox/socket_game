@@ -1,7 +1,6 @@
 import { Debug } from "@prisma/client/runtime/library";
 import { CLIENT_VERSION } from "../constants.js";
 import { getDefaultData } from "../init/defaultData.js";
-import { setStage } from "../models/stage.model.js";
 import { getUser, removeUser } from "../models/user.model.js";
 import handlerMappings from "./handlerMapping.js";
 // 유저 끊는 함수

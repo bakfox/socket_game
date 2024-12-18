@@ -1,5 +1,5 @@
 import { getDefaultData } from "../init/defaultData.js";
-import { getStage, setStage } from "../models/stage.model.js";
+import { getStage } from "../models/stage.model.js";
 
 export const moveStageHandler = (userID, payload) => {
   //유저 스테이지 정보
@@ -25,7 +25,5 @@ export const moveStageHandler = (userID, payload) => {
   if (!stages.data.some((stage) => stage.id === payload.targetStage)) {
     return { status: "fail", messgae: "Target stage not found" };
   }
-  //맞다면 스테이지 보내주기
-  setStage(userID, payload.targetStage);
   return { status: "success" };
 };
