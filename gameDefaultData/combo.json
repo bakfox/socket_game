@@ -2,9 +2,45 @@
   "name": "combo",
   "version": "1.0.0",
   "data": [
-    { "score": "0", "text": "NO" },
-    { "score": "100", "text": "GOOD" },
-    { "score": "400", "text": "GREAT" },
-    { "score": "1000", "text": "Excellent" }
+    {
+      "stageId": 1,
+      "data": [{ "GOOD": "100" }, { "GREAT": "400" }, { "Excellent": "1000" }]
+    },
+    {
+      "stageId": 2,
+      "data": [{ "GOOD": "100" }, { "GREAT": "400" }, { "Excellent": "1000" }]
+    },
+    {
+      "stageId": 3,
+      "data": [{ "GOOD": "100" }, { "GREAT": "400" }, { "Excellent": "1000" }]
+    },
+    {
+      "stageId": 4,
+      "data": [{ "GOOD": "100" }, { "GREAT": "400" }, { "Excellent": "1000" }]
+    },
+    {
+      "stageId": 5,
+      "data": [{ "GOOD": "100" }, { "GREAT": "400" }, { "Excellent": "1000" }]
+    },
+    {
+      "stageId": 6,
+      "data": [{ "GOOD": "100" }, { "GREAT": "400" }, { "Excellent": "1000" }]
+    },
+    {
+      "stageId": 7,
+      "data": [{ "GOOD": "100" }, { "GREAT": "400" }, { "Excellent": "1000" }]
+    },
+    {
+      "stageId": 8,
+      "data": [{ "GOOD": "100" }, { "GREAT": "400" }, { "Excellent": "1000" }]
+    },
+    {
+      "stageId": 9,
+      "data": [{ "GOOD": "100" }, { "GREAT": "400" }, { "Excellent": "1000" }]
+    },
+    {
+      "stageId": 10,
+      "data": [{ "GOOD": "100" }, { "GREAT": "400" }, { "Excellent": "1000" }]
+    }
   ]
 }

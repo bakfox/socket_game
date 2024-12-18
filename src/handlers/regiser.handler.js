@@ -7,7 +7,9 @@ const registerHander = (io) => {
   // 접속후 다음 이벤트를 받기 위해 대기하는 메소드입니다!
   io.on("connection", (socket) => {
     const userUUID = uuIdV4();
-    addUser({ uuId: userUUID, socketId: socket.id });
+    socket.on("login", (data) =>
+      addUser({ userName: data, uuId: userUUID, socketId: socket.id })
+    );
 
     handleConnect(socket, userUUID);
 
