@@ -1,12 +1,12 @@
 {
   "name": "player",
   "version": "1.0.0",
-  "data": [
-    { "hp": 3 },
-    { "atckCooltime": 2 },
-    { "atckReachMax": 3 },
-    { "atckReachgood": 2 },
-    { "atckReachgreat": 1 },
-    { "atckReachExcellent": 0.5 }
-  ]
+  "data": {
+    "hp": 3,
+    "atckCooltime": 2,
+    "atckReachMax": 3,
+    "atckReachgood": 2,
+    "atckReachgreat": 1,
+    "atckReachExcellent": 0.5
+  }
 }
