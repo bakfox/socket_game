@@ -1,10 +1,17 @@
 import { Socket } from "socket.io";
 import { getDefaultData } from "../init/defaultData.js";
+import { createingame } from "../models/ingame.model.js";
 
 export const gameStart = (uuId, payload) => {
-  const { stage } = getDefaultData();
-  //setStage(uuId, stages.data[0].id, payload.timestamp);
-  return { status: "Sucesss" };
+  const { combo, monster, player, stage } = getDefaultData();
+  createingame(uuId);
+  return {
+    status: "Sucesss",
+    combo: combo.data[payload.stageId],
+    monster: monster.data[payload.stageId],
+    player,
+    stage: stage.data[payload.stageId],
+  };
 };
 export const gameEnd = (uuId, payload) => {
   const { timestamp: gameEndTime, score } = payload;
@@ -25,3 +32,5 @@ export const gameEnd = (uuId, payload) => {
   });
   return { status: "Sucesss" };
 };
+export const playerAtck = (uuId) => {};
+export const playerhit = (uuId) => {};

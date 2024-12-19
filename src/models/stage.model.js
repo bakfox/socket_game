@@ -52,6 +52,8 @@ export const getStage = (uuid) => {
 export const saveStage = (uuid, stageId, clearData) => {
   stage[uuid].defoltStage[stageId] = clearData;
 };
-export const clearStage = (uuid) => {
-  stage[uuid] = [];
+export const removeStage = (uuid) => {
+  if (stage[uuid]) {
+    return stage.splice(uuid, 1);
+  }
 };

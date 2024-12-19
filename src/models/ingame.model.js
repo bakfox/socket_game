@@ -6,16 +6,18 @@ const defaultIngame = {
 };
 
 export const createingame = (uuid) => {
-  stage[uuid] = [];
+  ingame[uuid] = defaultIngame;
 };
 
 export const getingame = (uuid) => {
-  return stage[uuid];
+  return ingame[uuid];
 };
 
 export const setingame = (uuid, position, timestamp) => {
-  return stage[uuid].push({ id, timestamp });
+  return ingame[uuid].push({ id, timestamp });
 };
-export const clearingame = (uuid) => {
-  stage[uuid] = [];
+export const removeingame = (uuid) => {
+  if (ingame[uuid]) {
+    return ingame.splice(uuid, 1);
+  }
 };

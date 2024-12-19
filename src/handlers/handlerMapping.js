@@ -1,10 +1,11 @@
-import { gameEnd, gameStart } from "./game.handler.js";
-import { moveStageHandler } from "./stage.handler.js";
-
+import { gameEnd, gameStart, playerAtck, playerhit } from "./game.handler.js";
+import { getSelectStage } from "./stage.handler.js";
 const handlerMappings = {
   2: gameStart,
   3: gameEnd,
-  11: moveStageHandler,
+  11: playerAtck,
+  12: playerhit,
+  21: getSelectStage,
 };
 
 export default handlerMappings;
