@@ -18,10 +18,10 @@ export const gameStart = (uuId, payload) => {
     status: "Sucesss",
     message: "게임 시작하십쇼!",
     data: {
-      combo: combo.data[payload.stageId],
-      monster: monster.data[payload.stageId],
-      player,
-      stage: stage.data[payload.stageId],
+      combo: combo.data[payload.stageId].data,
+      monster: monster.data[payload.stageId].data,
+      player: player.data,
+      stage: stage.data[payload.stageId].data,
     },
   };
 };

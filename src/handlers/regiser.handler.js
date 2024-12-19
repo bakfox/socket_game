@@ -18,12 +18,17 @@ const registerHander = (io) => {
         ),
       createStage(userUUID)
     );
+    socket.emit("handleConnect", {
+      status: "Sucesss",
+      message: "성공적으로 연결함",
+      data: {},
+    });
 
     socket.on("event", (data) => handleEvent(io, socket, userUUID, data)); //이벤트 핸들러 연결
     //접속 해제
     socket.on("disconnect", (socket) => {
-      removeStage(uuId);
-      removeingame(uuId);
+      removeStage(userUUID);
+      removeingame(userUUID);
       handleDisconnect(socket, userUUID);
     });
   });

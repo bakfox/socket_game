@@ -2,35 +2,35 @@ const stage = [];
 const defoltStage = [
   {
     stageId: 1,
-    data: [{ score: "0", maxScore: "0", scoreText: "F" }],
+    data: [{ score: "0", maxCombo: "0", scoreText: "F" }],
   },
   {
     stageId: 2,
-    data: [{ score: "0", maxScore: "0", scoreText: "F" }],
+    data: [{ score: "0", maxCombo: "0", scoreText: "F" }],
   },
   {
     stageId: 3,
-    data: [{ score: "0", maxScore: "0", scoreText: "F" }],
+    data: [{ score: "0", maxCombo: "0", scoreText: "F" }],
   },
   {
     stageId: 4,
-    data: [{ score: "0", maxScore: "0", scoreText: "F" }],
+    data: [{ score: "0", maxCombo: "0", scoreText: "F" }],
   },
   {
     stageId: 5,
-    data: [{ score: "0", maxScore: "0", scoreText: "F" }],
+    data: [{ score: "0", maxCombo: "0", scoreText: "F" }],
   },
   {
     stageId: 6,
-    data: [{ score: "0", maxScore: "0", scoreText: "F" }],
+    data: [{ score: "0", maxCombo: "0", scoreText: "F" }],
   },
   {
     stageId: 7,
-    data: [{ score: "0", maxScore: "0", scoreText: "F" }],
+    data: [{ score: "0", maxCombo: "0", scoreText: "F" }],
   },
   {
     stageId: 8,
-    data: [{ score: "0", maxScore: "0", scoreText: "F" }],
+    data: [{ score: "0", maxCombo: "0", scoreText: "F" }],
   },
   {
     stageId: 9,

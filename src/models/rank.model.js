@@ -1,5 +1,3 @@
-import { getDefaultData } from "../init/defaultData";
-
 export const rankCeck = (rank, stageId) => {
   switch (rank) {
     case "F":

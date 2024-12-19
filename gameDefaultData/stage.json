@@ -47,6 +47,11 @@
       "clearScore": "A",
       "monsters": 250
     },
+    {
+      "id": 10,
+      "clearScore": "A",
+      "monsters": 280
+    },
     { "F": 0.5 },
     { "C": 0.6 },
     { "B": 0.7 },
