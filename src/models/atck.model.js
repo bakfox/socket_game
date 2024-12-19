@@ -3,27 +3,28 @@ import { atckScoreingame, hitScoreingame } from "./ingame.model.js";
 
 export const checkAtck = (uuId, position, stageId) => {
   const { player, combo } = getDefaultData();
+  const positionTemp = position;
   if (
-    position <= player[5].atckReachExcellent &&
-    position >= -player[5].atckReachExcellent
+    positionTemp <= player.data.atckReachExcellent &&
+    positionTemp >= -player.data.atckReachExcellent
   ) {
-    atckScoreingame(uuId, combo.data[stageId].data[2].Excellent);
+    atckScoreingame(uuId, combo.data[stageId].data.Excellent);
     return;
   }
   //덜 좋은거
   if (
-    position <= player[4].atckReachgreat &&
-    position >= -player[4].atckReachgreat
+    positionTemp <= player.data.atckReachgreat &&
+    positionTemp >= -player.data.atckReachgreat
   ) {
-    atckScoreingame(uuId, combo.data[stageId].data[1].GREAT);
+    atckScoreingame(uuId, combo.data[stageId].data.GREAT);
     return;
   }
   // 좋은거
   if (
-    position <= player[3].atckReachgood &&
-    position >= -player[3].atckReachgood
+    positionTemp <= player.data.atckReachgood &&
+    positionTemp >= -player.data.atckReachgood
   ) {
-    atckScoreingame(uuId, combo.data[stageId].data[0].GOOD);
+    atckScoreingame(uuId, combo.data[stageId].data.GOOD);
     return;
   }
   //빚나감!

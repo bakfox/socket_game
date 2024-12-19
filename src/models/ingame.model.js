@@ -1,5 +1,5 @@
 const ingame = [];
-const defaultIngame = {
+let defaultIngame = {
   score: 0,
   combo: 0,
   maxCombo: 0,
@@ -14,15 +14,16 @@ export const getingame = (uuid) => {
 };
 
 export const atckScoreingame = (uuid, score) => {
-  ingame[uuid].defaultIngame.combo++;
-  if (ingame[uuid].defaultIngame.maxCombo < ingame[uuid].defaultIngame.combo) {
-    ingame[uuid].defaultIngame.maxCombo = ingame[uuid].defaultIngame.combo;
+  ingame[uuid].combo++;
+  if (ingame[uuid].maxCombo < ingame[uuid].combo) {
+    ingame[uuid].maxCombo = ingame[uuid].combo;
   }
-  return (ingame[uuid].defaultIngame.score += score);
+  ingame[uuid].score = Number(ingame[uuid].score) + Number(score);
+  return;
 };
 
 export const hitScoreingame = (uuid) => {
-  return (ingame[uuid].defaultIngame.combo = 0);
+  ingame[uuid].combo = 0;
 };
 
 export const removeingame = (uuid) => {

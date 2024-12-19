@@ -8,12 +8,23 @@ import {
 } from "../models/ingame.model.js";
 import { rankCeck } from "../models/rank.model.js";
 import { checkAtck } from "../models/atck.model.js";
+import { saveStage } from "../models/stage.model.js";
 const checkScore = 2000;
 const checkCombo = 10;
 
+export const userLogin = (uuId, payload) => {
+  return {
+    broadcast: true,
+    status: "Sucesss",
+    message: `&${payload.name}님이 로그인 하셨습니다. `,
+    data: {},
+  };
+};
+
 export const gameStart = (uuId, payload) => {
   const { combo, monster, player, stage } = getDefaultData();
-  createingame(uuId);
+  const ingame = createingame(uuId);
+  console.log(getingame(uuId));
   return {
     status: "Sucesss",
     message: "게임 시작하십쇼!",
@@ -26,16 +37,23 @@ export const gameStart = (uuId, payload) => {
   };
 };
 export const gameEnd = (uuId, payload) => {
-  const { combo, score, scoreRank } = payload;
+  const { combo, score, scoreRank, stageId } = payload;
   const ingameData = getingame(uuId);
+  console.log(ingameData.combo, ingameData.score, ingameData.rankCeck);
   let saveScore =
-    Math.abs(score - ingameData.score) <= checkScore
-      ? combo.score
-      : ingameData.score;
+    Math.abs(score - Number(ingameData.score)) <= checkScore
+      ? score
+      : Number(ingameData.score);
   let saveCombo =
-    Math.abs(score - ingameData.score) <= checkCombo
-      ? combo.score
-      : ingameData.score;
+    Math.abs(combo - Number(ingameData.score)) <= checkCombo
+      ? combo
+      : Number(ingameData.combo);
+  saveStage(uuId, stageId, {
+    score: saveScore,
+    maxCombo: ingameData.maxCombo,
+    scoreText: scoreRank,
+  });
+  console.log(saveCombo);
   removeingame(uuId);
   if (!rankCeck(scoreRank)) {
     return {
