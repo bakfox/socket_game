@@ -13,9 +13,18 @@ export const getingame = (uuid) => {
   return ingame[uuid];
 };
 
-export const setingame = (uuid, position, timestamp) => {
-  return ingame[uuid].push({ id, timestamp });
+export const atckScoreingame = (uuid, score) => {
+  ingame[uuid].defaultIngame.combo++;
+  if (ingame[uuid].defaultIngame.maxCombo < ingame[uuid].defaultIngame.combo) {
+    ingame[uuid].defaultIngame.maxCombo = ingame[uuid].defaultIngame.combo;
+  }
+  return (ingame[uuid].defaultIngame.score += score);
 };
+
+export const hitScoreingame = (uuid) => {
+  return (ingame[uuid].defaultIngame.combo = 0);
+};
+
 export const removeingame = (uuid) => {
   if (ingame[uuid]) {
     return ingame.splice(uuid, 1);
