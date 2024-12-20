@@ -45,9 +45,9 @@ export const gameEnd = (uuId, payload) => {
       ? score
       : Number(ingameData.score);
   let saveCombo =
-    Math.abs(combo - Number(ingameData.score)) <= checkCombo
+    Math.abs(combo - Number(ingameData.maxCombo)) <= checkCombo
       ? combo
-      : Number(ingameData.combo);
+      : Number(ingameData.maxCombo);
   saveStage(uuId, stageId, {
     score: saveScore,
     maxCombo: ingameData.maxCombo,
@@ -72,6 +72,7 @@ export const gameEnd = (uuId, payload) => {
 export const playerAtck = (uuId, payload) => {
   const { stageId, position } = payload;
   checkAtck(uuId, position, stageId);
+  console.log(getingame(uuId));
   return {
     status: "Sucesss",
     message: "성공적으로 요청했습니다",

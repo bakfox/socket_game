@@ -1,5 +1,5 @@
 const stage = [];
-let defoltStage = [
+const defoltStage = [
   {
     stageId: 1,
     data: { score: "0", maxCombo: "0", scoreText: "F" },

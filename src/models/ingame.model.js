@@ -1,5 +1,5 @@
 const ingame = [];
-let defaultIngame = {
+const defaultIngame = {
   score: 0,
   combo: 0,
   maxCombo: 0,
