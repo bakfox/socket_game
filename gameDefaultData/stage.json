@@ -4,66 +4,53 @@
   "data": [
     {
       "id": 1,
-      "scoreInt": "0",
-      "score": "F",
       "clearScore": "A",
       "monsters": 50
     },
     {
       "id": 2,
-      "scoreInt": "0",
-      "score": "F",
       "clearScore": "A",
       "monsters": 70
     },
     {
       "id": 3,
-      "scoreInt": "0",
-      "score": "F",
       "clearScore": "A",
       "monsters": 90
     },
     {
       "id": 4,
-      "scoreInt": "0",
-      "score": "F",
       "clearScore": "A",
       "monsters": 120
     },
     {
       "id": 5,
-      "scoreInt": "0",
-      "score": "F",
       "clearScore": "A",
       "monsters": 150
     },
     {
       "id": 6,
-      "scoreInt": "0",
-      "score": "F",
       "clearScore": "A",
       "monsters": 180
     },
     {
       "id": 7,
-      "scoreInt": "0",
-      "score": "F",
       "clearScore": "A",
       "monsters": 200
     },
     {
       "id": 8,
-      "scoreInt": "0",
-      "score": "F",
       "clearScore": "A",
       "monsters": 220
     },
     {
       "id": 9,
-      "scoreInt": "0",
-      "score": "F",
       "clearScore": "A",
       "monsters": 250
+    },
+    {
+      "id": 10,
+      "clearScore": "A",
+      "monsters": 280
     },
     { "F": 0.5 },
     { "C": 0.6 },

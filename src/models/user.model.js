@@ -1,7 +1,7 @@
 const users = [];
 
-export const addUser = (user) => {
-  users.push(user);
+export const addUser = (user, uuId) => {
+  users[uuId] = user;
 };
 
 export const removeUser = (socketId) => {
@@ -11,6 +11,9 @@ export const removeUser = (socketId) => {
   }
 };
 
-export const getUser = () => {
+export const getUser = (uuId) => {
+  return users[uuId];
+};
+export const getAllUser = () => {
   return users;
 };
